@@ -2,8 +2,8 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\Models\Admin\Permiso;
 use Faker\Generator as Faker;
-use App\Models\Permiso;
 
 
 $factory->define(Permiso::class, function (Faker $faker) {
