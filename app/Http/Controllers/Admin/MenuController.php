@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ValidacionMenu;
 use App\Models\Admin\Menu;
+use App\Http\Requests\ValidacionMenu;
 
 class MenuController extends Controller
 {
@@ -16,8 +16,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menus =Menu::getMenu();
-        dd($menus);
+        $menus = Menu::getMenu();
+        return view('admin.menu.index', compact('menus'));
     }
 
     /** 
