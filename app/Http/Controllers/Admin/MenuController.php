@@ -18,6 +18,7 @@ class MenuController extends Controller
     {
         $menus = Menu::getMenu();
         return view('admin.menu.index', compact('menus'));
+        
     }
 
     /** 
@@ -28,6 +29,7 @@ class MenuController extends Controller
     public function crear()
     {
         return view('admin.menu.crear');
+        
     }
 
     /**
@@ -40,6 +42,8 @@ class MenuController extends Controller
     {
         Menu::create($request->all());
         return redirect('admin/menu/crear')->with('mensaje', 'Menú creado con exito');
+        
+        
     }
 
     /**
@@ -85,5 +89,16 @@ class MenuController extends Controller
     public function eliminar($id)
     {
         //
+    }
+
+    public function guardarOrden(Request $request)
+    {
+        if ($request->ajax()) {
+            $menu = new Menu;
+            $menu->guardarOrden($request->menu);
+            return response()->json(['respuesta' => 'ok']);
+        } else {
+            abort(404);
+        }
     }
 }

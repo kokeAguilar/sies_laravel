@@ -1,6 +1,6 @@
-@extends("theme/$theme/layout")
-@section('titulo')
-    Menú
+@extends("theme.$theme.layout")
+@section("titulo")
+Menú
 @endsection
 
 @section("styles")
@@ -22,6 +22,7 @@
         <div class="box box-success">
             <div class="box-header with-border">
                 <h3 class="box-title">Menús</h3>
+                <a href="{{route('crear_menu')}}" class="btn btn-success btn-sm pull-right">Crear menú</a>
             </div>
             <div class="box-body">
                 @csrf
