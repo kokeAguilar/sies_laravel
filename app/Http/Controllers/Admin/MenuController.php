@@ -16,7 +16,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        //
+        $menus =Menu::getMenu();
+        dd($menus);
     }
 
     /** 
