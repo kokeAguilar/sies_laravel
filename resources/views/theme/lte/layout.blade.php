@@ -21,6 +21,7 @@
     @yield("styles")
     
     <link rel="stylesheet" href="{{asset("assets/css/custom.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/toastr.min.css")}}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,6 +73,9 @@
     @yield("scriptsPlugins")
     <script src="{{asset("assets/js/jquery-validation/jquery.validate.min.js")}}"></script>
     <script src="{{asset("assets/js/jquery-validation/localization/messages_es.js")}}"></script>
+    <script src="{{asset("assets/js/sweetalert.min.js")}}"></script>
+    <script src="{{asset("assets/js/toastr.min.js")}}"></script>
+    <script src="{{asset("assets/js/scripts.js")}}"></script>
     <script src="{{asset("assets/js/funciones.js")}}"></script>
   
     @yield("scripts")
